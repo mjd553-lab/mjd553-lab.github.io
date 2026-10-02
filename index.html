@@ -2,134 +2,2730 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: white;
-            color: #222;
-        }
+  <meta charset="UTF-8">
 
-        header {
-            background-color: #222;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-        nav {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
-        }
+  <meta
+    name="description"
+    content="Michael DeVito — Rutgers University Finance Student Portfolio"
+  >
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
+  <title>Michael DeVito | Finance Portfolio</title>
 
-        main {
-            padding: 50px;
-            text-align: center;
-        }
 
-        section {
-            margin-bottom: 80px;
-        }
+  <!-- Google Fonts -->
 
-        h1 {
-            font-size: 50px;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-        h2 {
-            font-size: 35px;
-        }
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        p {
-            font-size: 18px;
-            color: #555;
-        }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
 
-        .project {
-            display: inline-block;
-            width: 250px;
-            padding: 30px;
-            margin: 10px;
-            background-color: #f2f2f2;
-            border-radius: 10px;
-        }
 
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+  <!-- =========================================================
+       CSS
+  ========================================================== -->
+
+  <style>
+
+    /* =========================================================
+       VARIABLES
+    ========================================================== */
+
+    :root {
+
+      --navy: #0b1d33;
+
+      --navy-light: #102945;
+
+      --gold: #c6a15b;
+
+      --gold-light: #d9bc7c;
+
+      --ink: #142235;
+
+      --muted: #657285;
+
+      --paper: #f6f5f1;
+
+      --white: #ffffff;
+
+      --line: #dfe3e8;
+
+      --serif: "Playfair Display", Georgia, serif;
+
+      --sans: "Inter", Arial, sans-serif;
+
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      color: var(--ink);
+
+      background: var(--paper);
+
+      font-family: var(--sans);
+
+      line-height: 1.65;
+
+    }
+
+
+    img {
+      max-width: 100%;
+    }
+
+
+    a {
+      transition: all 0.25s ease;
+    }
+
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+
+    /* =========================================================
+       GLOBAL
+    ========================================================== */
+
+    .container {
+
+      width: min(
+        1120px,
+        calc(100% - 48px)
+      );
+
+      margin: 0 auto;
+
+    }
+
+
+    .section {
+
+      padding: 110px 0;
+
+    }
+
+
+    .eyebrow {
+
+      font-size: 0.72rem;
+
+      letter-spacing: 0.19em;
+
+      font-weight: 700;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .gold {
+      color: var(--gold);
+    }
+
+
+    .section h2 {
+
+      font-family: var(--serif);
+
+      font-size: clamp(
+        2.7rem,
+        5vw,
+        4.4rem
+      );
+
+      line-height: 1.02;
+
+      letter-spacing: -0.04em;
+
+      margin-bottom: 30px;
+
+    }
+
+
+    h2 em {
+
+      color: var(--gold);
+
+      font-style: italic;
+
+      font-weight: 600;
+
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================== */
+
+    .site-header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      background: rgba(
+        11,
+        29,
+        51,
+        0.97
+      );
+
+      backdrop-filter: blur(10px);
+
+    }
+
+
+    .nav {
+
+      height: 76px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    .brand {
+
+      color: white;
+
+      text-decoration: none;
+
+      font-size: 1.5rem;
+
+      font-weight: 700;
+
+      letter-spacing: -0.05em;
+
+    }
+
+
+    .brand span {
+      color: var(--gold);
+    }
+
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 28px;
+
+    }
+
+
+    .nav-links a {
+
+      color: #dce5ef;
+
+      text-decoration: none;
+
+      font-size: 0.82rem;
+
+      font-weight: 600;
+
+      letter-spacing: 0.04em;
+
+    }
+
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+
+    .nav-cta {
+
+      border: 1px solid var(--gold);
+
+      padding: 9px 15px;
+
+    }
+
+
+    .menu-toggle {
+
+      display: none;
+
+      background: none;
+
+      border: none;
+
+      color: white;
+
+      font-size: 1.5rem;
+
+      cursor: pointer;
+
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================== */
+
+    .hero {
+
+      background: var(--navy);
+
+      color: white;
+
+      min-height: calc(100vh - 76px);
+
+      display: flex;
+
+      align-items: center;
+
+      overflow: hidden;
+
+    }
+
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: 80px;
+
+      align-items: center;
+
+      padding: 90px 0;
+
+    }
+
+
+    .hero .eyebrow {
+      color: var(--gold);
+    }
+
+
+    .hero h1 {
+
+      font-family: var(--serif);
+
+      font-size: clamp(
+        4.2rem,
+        9vw,
+        7.5rem
+      );
+
+      line-height: 0.9;
+
+      letter-spacing: -0.055em;
+
+      margin-bottom: 30px;
+
+    }
+
+
+    .hero h1 em {
+
+      color: var(--gold);
+
+      font-style: italic;
+
+      font-weight: 600;
+
+    }
+
+
+    .hero-subtitle {
+
+      font-size: 1.05rem;
+
+      max-width: 620px;
+
+      color: #c5d0dd;
+
+    }
+
+
+    .hero-actions {
+
+      display: flex;
+
+      gap: 14px;
+
+      margin: 32px 0;
+
+    }
+
+
+    .button {
+
+      display: inline-block;
+
+      text-decoration: none;
+
+      padding: 13px 20px;
+
+      font-weight: 700;
+
+      font-size: 0.82rem;
+
+      letter-spacing: 0.03em;
+
+    }
+
+
+    .button.primary {
+
+      background: var(--gold);
+
+      color: var(--navy);
+
+    }
+
+
+    .button.primary:hover {
+
+      background: var(--gold-light);
+
+      transform: translateY(-2px);
+
+    }
+
+
+    .button.secondary {
+
+      border: 1px solid #6c7d90;
+
+      color: white;
+
+    }
+
+
+    .button.secondary:hover {
+
+      border-color: white;
+
+    }
+
+
+    .hero-meta {
+
+      display: flex;
+
+      gap: 28px;
+
+      color: #8798aa;
+
+      font-size: 0.72rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.12em;
+
+    }
+
+
+    /* =========================================================
+       PHOTO
+    ========================================================== */
+
+    .portrait-wrap {
+
+      position: relative;
+
+      max-width: 430px;
+
+      margin: auto;
+
+    }
+
+
+    .portrait-frame {
+
+      aspect-ratio: 4 / 5;
+
+      background: #172f49;
+
+      border: 1px solid #3b5066;
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      overflow: hidden;
+
+    }
+
+
+    .portrait-frame img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+
+    .photo-placeholder {
+
+      background:
+        linear-gradient(
+          135deg,
+          #172f49,
+          #0c2139
+        );
+
+    }
+
+
+    .placeholder-content {
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 8px;
+
+      text-align: center;
+
+      color: #8293a6;
+
+      padding: 20px;
+
+    }
+
+
+    .placeholder-content strong {
+
+      color: #c7d2dd;
+
+      letter-spacing: 0.14em;
+
+    }
+
+
+    .placeholder-content code {
+
+      color: var(--gold);
+
+    }
+
+
+    .accent-card {
+
+      position: absolute;
+
+      left: -35px;
+
+      bottom: 35px;
+
+      background: var(--gold);
+
+      color: var(--navy);
+
+      padding: 18px 22px;
+
+      width: 190px;
+
+      box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.22);
+
+    }
+
+
+    .accent-card span {
+
+      font-size: 0.7rem;
+
+      font-weight: 800;
+
+    }
+
+
+    .accent-card p {
+
+      margin: 6px 0 0;
+
+      font-size: 0.82rem;
+
+      line-height: 1.4;
+
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================== */
+
+    .light {
+
+      background: var(--paper);
+
+    }
+
+
+    .two-col {
+
+      display: grid;
+
+      grid-template-columns:
+        0.8fr 1.2fr;
+
+      gap: 100px;
+
+    }
+
+
+    .section-copy {
+
+      font-size: 1rem;
+
+      color: #526173;
+
+    }
+
+
+    .section-copy p {
+
+      margin-bottom: 20px;
+
+    }
+
+
+    .stat-row {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      border-top: 1px solid var(--line);
+
+      margin-top: 45px;
+
+      padding-top: 24px;
+
+      gap: 20px;
+
+    }
+
+
+    .stat-row div {
+
+      display: flex;
+
+      flex-direction: column;
+
+    }
+
+
+    .stat-row strong {
+
+      font-family: var(--serif);
+
+      font-size: 1.7rem;
+
+    }
+
+
+    .stat-row span {
+
+      font-size: 0.72rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.07em;
+
+      color: var(--muted);
+
+    }
+
+
+    /* =========================================================
+       EDUCATION
+    ========================================================== */
+
+    .navy {
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .education-card {
+
+      border-top: 1px solid #53677d;
+
+      border-bottom: 1px solid #53677d;
+
+      padding: 40px 0;
+
+      display: grid;
+
+      grid-template-columns:
+        1.3fr 0.7fr;
+
+      gap: 30px;
+
+      align-items: end;
+
+    }
+
+
+    .education-card h2 {
+
+      margin: 5px 0;
+
+    }
+
+
+    .education-card p {
+
+      color: #9eafc0;
+
+    }
+
+
+    .small-label {
+
+      font-size: 0.7rem;
+
+      letter-spacing: 0.15em;
+
+      font-weight: 700;
+
+      color: var(--gold);
+
+    }
+
+
+    .degree {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 4px;
+
+      color: #b9c5d1;
+
+    }
+
+
+    .degree strong {
+
+      font-size: 1.05rem;
+
+      color: white;
+
+    }
+
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================== */
+
+    .timeline {
+
+      margin-top: 55px;
+
+    }
+
+
+    .timeline-item {
+
+      display: grid;
+
+      grid-template-columns:
+        230px 1fr;
+
+      gap: 45px;
+
+      border-top: 1px solid var(--line);
+
+      padding: 38px 0;
+
+    }
+
+
+    .date {
+
+      font-size: 0.72rem;
+
+      letter-spacing: 0.11em;
+
+      font-weight: 700;
+
+      color: var(--muted);
+
+    }
+
+
+    .timeline-content h3 {
+
+      font-size: 1.55rem;
+
+      margin-bottom: 2px;
+
+    }
+
+
+    .role {
+
+      color: var(--gold);
+
+      font-weight: 600;
+
+      font-size: 0.86rem;
+
+    }
+
+
+    .timeline-content ul {
+
+      margin: 18px 0 0;
+
+      padding-left: 20px;
+
+      color: #526173;
+
+    }
+
+
+    .timeline-content li {
+
+      margin: 8px 0;
+
+    }
+
+
+    /* =========================================================
+       PROJECTS
+    ========================================================== */
+
+    .projects {
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .section-heading {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 80px;
+
+      align-items: end;
+
+    }
+
+
+    .section-heading h2 {
+
+      margin-bottom: 0;
+
+    }
+
+
+    .section-intro {
+
+      max-width: 430px;
+
+      color: #aebdca;
+
+    }
+
+
+    .project-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 18px;
+
+      margin-top: 60px;
+
+    }
+
+
+    .project-card {
+
+      background: var(--navy-light);
+
+      border: 1px solid #29415b;
+
+      padding: 30px;
+
+      min-height: 280px;
+
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+
+    }
+
+
+    .project-card:hover {
+
+      transform: translateY(-5px);
+
+      border-color: #6b7f94;
+
+    }
+
+
+    .project-card.featured {
+
+      background: #183552;
+
+    }
+
+
+    .project-number {
+
+      font-family: var(--serif);
+
+      font-size: 1.4rem;
+
+      color: var(--gold);
+
+    }
+
+
+    .project-type {
+
+      font-size: 0.7rem;
+
+      letter-spacing: 0.15em;
+
+      font-weight: 700;
+
+      color: var(--gold);
+
+    }
+
+
+    .project-card h3 {
+
+      font-family: var(--serif);
+
+      font-size: 1.7rem;
+
+      margin: 10px 0;
+
+    }
+
+
+    .project-card p:not(.project-type) {
+
+      color: #afbdc9;
+
+    }
+
+
+    .tags {
+
+      display: flex;
+
+      gap: 8px;
+
+      flex-wrap: wrap;
+
+      margin-top: 22px;
+
+    }
+
+
+    .tags span {
+
+      font-size: 0.65rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+
+      border: 1px solid #435a72;
+
+      padding: 5px 8px;
+
+      color: #d1dbe4;
+
+    }
+
+
+    .project-note {
+
+      margin-top: 18px;
+
+      border-left: 3px solid var(--gold);
+
+      padding: 15px 20px;
+
+      background: var(--navy-light);
+
+      color: #b9c6d2;
+
+      font-size: 0.82rem;
+
+    }
+
+
+    .project-note strong {
+
+      color: white;
+
+    }
+
+
+    /* =========================================================
+       COMMUNITY
+    ========================================================== */
+
+    .community-list article {
+
+      display: flex;
+
+      gap: 22px;
+
+      border-top: 1px solid var(--line);
+
+      padding: 28px 0;
+
+    }
+
+
+    .community-list article > span {
+
+      font-family: var(--serif);
+
+      color: var(--gold);
+
+      font-size: 1.4rem;
+
+    }
+
+
+    .community-list h3 {
+
+      margin-bottom: 5px;
+
+    }
+
+
+    .community-list p {
+
+      color: var(--muted);
+
+      margin: 0;
+
+    }
+
+
+    /* =========================================================
+       SKILLS
+    ========================================================== */
+
+    .skills {
+
+      background: var(--navy);
+
+      color: white;
+
+    }
+
+
+    .skills-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      border-top: 1px solid #3b526b;
+
+      margin-top: 35px;
+
+    }
+
+
+    .skills-grid > div {
+
+      padding: 30px 30px 15px 0;
+
+      border-right: 1px solid #3b526b;
+
+    }
+
+
+    .skills-grid > div:not(:first-child) {
+
+      padding-left: 30px;
+
+    }
+
+
+    .skill-index {
+
+      color: var(--gold);
+
+      font-family: var(--serif);
+
+    }
+
+
+    .skills-grid h3 {
+
+      margin: 10px 0;
+
+    }
+
+
+    .skills-grid p {
+
+      color: #aebdca;
+
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================== */
+
+    .contact {
+
+      background: #e8e8e3;
+
+    }
+
+
+    .contact-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 100px;
+
+    }
+
+
+    .contact-copy {
+
+      max-width: 510px;
+
+      color: #596779;
+
+    }
+
+
+    .contact-links {
+
+      border-top: 1px solid #cbd0d5;
+
+    }
+
+
+    .contact-links a,
+    .contact-links > div {
+
+      display: flex;
+
+      flex-direction: column;
+
+      text-decoration: none;
+
+      color: var(--ink);
+
+      border-bottom: 1px solid #cbd0d5;
+
+      padding: 22px 0;
+
+    }
+
+
+    .contact-links a:hover strong {
+
+      color: var(--gold);
+
+    }
+
+
+    .contact-links span {
+
+      font-size: 0.65rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.15em;
+
+      color: var(--muted);
+
+    }
+
+
+    .contact-links strong {
+
+      font-size: 0.9rem;
+
+      margin-top: 4px;
+
+      word-break: break-word;
+
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================== */
+
+    footer {
+
+      background: #071728;
+
+      color: #8090a0;
+
+      padding: 25px 0;
+
+      font-size: 0.7rem;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .footer-inner {
+
+      display: flex;
+
+      justify-content: space-between;
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================== */
+
+    @media (max-width: 800px) {
+
+
+      .container {
+
+        width: min(
+          100% - 36px,
+          1120px
+        );
+
+      }
+
+
+      .menu-toggle {
+
+        display: block;
+
+      }
+
+
+      .nav-links {
+
+        display: none;
+
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+
+        right: 0;
+
+        background: var(--navy);
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+      }
+
+
+      .nav-links.open {
+
+        display: flex;
+
+      }
+
+
+      .hero {
+
+        min-height: auto;
+
+      }
+
+
+      .hero-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        padding: 70px 0;
+
+      }
+
+
+      .hero h1 {
+
+        font-size: clamp(
+          4rem,
+          18vw,
+          6rem
+        );
+
+      }
+
+
+      .hero-meta {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+      }
+
+
+      .portrait-wrap {
+
+        width: min(
+          100%,
+          390px
+        );
+
+      }
+
+
+      .accent-card {
+
+        left: -10px;
+
+      }
+
+
+      .section {
+
+        padding: 75px 0;
+
+      }
+
+
+      .two-col {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+      }
+
+
+      .stat-row {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .education-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+      }
+
+
+      .timeline-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+      }
+
+
+      .section-heading {
+
+        display: block;
+
+      }
+
+
+      .section-intro {
+
+        margin-top: 25px;
+
+      }
+
+
+      .project-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .skills-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+      .skills-grid > div,
+      .skills-grid > div:not(:first-child) {
+
+        padding: 25px 0;
+
+        border-right: none;
+
+        border-bottom:
+          1px solid #3b526b;
+
+      }
+
+
+      .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+      }
+
+
+      .footer-inner {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 
 <body>
 
-    <header>
-        <h1>My Portfolio</h1>
-        <p>Welcome to my website</p>
-    </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+
+  <header class="site-header">
+
+    <nav class="nav container">
+
+      <a
+        class="brand"
+        href="#home"
+      >
+        MD<span>.</span>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        aria-label="Open navigation"
+      >
+        ☰
+      </button>
+
+
+      <div class="nav-links">
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#education">
+          Education
+        </a>
+
+        <a href="#experience">
+          Experience
+        </a>
+
+        <a href="#projects">
+          Projects
+        </a>
+
+        <a href="#skills">
+          Skills
+        </a>
+
+        <a
+          href="#contact"
+          class="nav-cta"
+        >
+          Contact
+        </a>
+
+      </div>
+
     </nav>
 
-    <main>
+  </header>
 
-        <section id="home">
-            <h2>Hello!</h2>
-            <p>This is my portfolio website.</p>
-        </section>
 
-        <section id="about">
-            <h2>About Me</h2>
+
+  <!-- =========================================================
+       MAIN
+  ========================================================== -->
+
+  <main>
+
+
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+
+    <section
+      id="home"
+      class="hero"
+    >
+
+      <div class="hero-grid container">
+
+
+        <div class="hero-copy">
+
+          <p class="eyebrow">
+            FINANCE • BUSINESS • ANALYTICS
+          </p>
+
+
+          <h1>
+            Michael<br>
+            <em>DeVito</em>
+          </h1>
+
+
+          <p class="hero-subtitle">
+
+            Rutgers University finance student building
+            practical experience in business, operations,
+            analytics, and financial thinking.
+
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              class="button primary"
+              href="#projects"
+            >
+              View Projects
+            </a>
+
+
+            <a
+              class="button secondary"
+              href="#contact"
+            >
+              Let's Connect
+            </a>
+
+          </div>
+
+
+          <div class="hero-meta">
+
+            <span>
+              Rutgers Business School
+            </span>
+
+            <span>
+              Finance • Class of 2029
+            </span>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- PHOTO -->
+
+        <div class="portrait-wrap">
+
+          <div
+            class="portrait-frame"
+            id="portrait"
+          >
+
+            <!--
+              IMPORTANT:
+
+              To add your photo, put a file called:
+
+              photo.jpg
+
+              in the SAME folder as this index.html.
+
+              Then change src below to:
+
+              src="photo.jpg"
+            -->
+
+            <img
+              src="photo.jpg"
+              alt="Michael DeVito professional portrait"
+              id="profilePhoto"
+            >
+
+
+            <div
+              class="placeholder-content"
+              id="photoPlaceholder"
+            >
+
+              <strong>
+                YOUR PHOTO
+              </strong>
+
+              <span>
+
+                Add a professional headshot
+                named <code>photo.jpg</code>
+
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="accent-card">
+
+            <span>
+              01
+            </span>
+
             <p>
-                Write something about yourself here.
+
+              Focused on<br>
+
+              <strong>
+                growth & opportunity
+              </strong>
+
             </p>
-        </section>
 
-        <section id="projects">
-            <h2>My Projects</h2>
+          </div>
 
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Describe your project here.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         ABOUT
+    ======================================================== -->
+
+    <section
+      id="about"
+      class="section light"
+    >
+
+      <div class="container two-col">
+
+
+        <div>
+
+          <p class="eyebrow">
+            01 — ABOUT
+          </p>
+
+
+          <h2>
+
+            Early-career.<br>
+
+            <em>
+              High ambition.
+            </em>
+
+          </h2>
+
+        </div>
+
+
+
+        <div class="section-copy">
+
+          <p>
+
+            I am a Finance student at Rutgers University
+            interested in developing a strong foundation
+            across financial analysis, business operations,
+            and data-driven decision making.
+
+          </p>
+
+
+          <p>
+
+            My experience has taught me how to communicate
+            with customers and teammates, organize moving
+            parts under pressure, and take ownership of
+            practical problems.
+
+          </p>
+
+
+
+          <div class="stat-row">
+
+
+            <div>
+
+              <strong>
+                2029
+              </strong>
+
+              <span>
+                Expected graduation
+              </span>
+
             </div>
 
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Describe your project here.</p>
+
+            <div>
+
+              <strong>
+                3+
+              </strong>
+
+              <span>
+                Years of work experience
+              </span>
+
             </div>
 
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Describe your project here.</p>
+
+            <div>
+
+              <strong>
+                1,000+
+              </strong>
+
+              <span>
+                Service members supported
+              </span>
+
             </div>
-        </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: yourname@email.com</p>
-        </section>
 
-    </main>
+          </div>
 
-    <footer>
-        <p>© 2026 My Portfolio</p>
-    </footer>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         EDUCATION
+    ======================================================== -->
+
+    <section
+      id="education"
+      class="section navy"
+    >
+
+      <div class="container">
+
+        <p class="eyebrow gold">
+          02 — EDUCATION
+        </p>
+
+
+        <div class="education-card">
+
+
+          <div>
+
+            <p class="small-label">
+              RUTGERS BUSINESS SCHOOL
+            </p>
+
+
+            <h2>
+              Rutgers University
+            </h2>
+
+
+            <p>
+              New Brunswick, New Jersey
+            </p>
+
+          </div>
+
+
+
+          <div class="degree">
+
+            <strong>
+              Bachelor of Science
+            </strong>
+
+            <span>
+              Finance
+            </span>
+
+            <span>
+              Expected May 2029
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         EXPERIENCE
+    ======================================================== -->
+
+    <section
+      id="experience"
+      class="section light"
+    >
+
+      <div class="container">
+
+        <p class="eyebrow">
+          03 — EXPERIENCE
+        </p>
+
+
+        <h2>
+
+          Experience that<br>
+
+          <em>
+            translates.
+          </em>
+
+        </h2>
+
+
+
+        <div class="timeline">
+
+
+          <!-- TOWN GRILL -->
+
+          <article class="timeline-item">
+
+
+            <div class="date">
+
+              FEB 2021 — AUG 2026
+
+            </div>
+
+
+            <div class="timeline-content">
+
+              <h3>
+                Town Grill
+              </h3>
+
+
+              <p class="role">
+
+                Server • Host • Busser ·
+                Manasquan, NJ
+
+              </p>
+
+
+              <ul>
+
+                <li>
+
+                  Organized and delegated tasks during
+                  and after busy shifts, supporting smooth
+                  operations and communication.
+
+                </li>
+
+
+                <li>
+
+                  Planned and set up special outdoor
+                  dining nights, including seating plans
+                  and layouts designed to improve
+                  customer turnover.
+
+                </li>
+
+
+                <li>
+
+                  Handled double the typical customer
+                  volume during special dining events
+                  without overwhelming staff.
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- WALL RECREATION -->
+
+          <article class="timeline-item">
+
+
+            <div class="date">
+
+              JUN 2024 — JUL 2024
+
+            </div>
+
+
+            <div class="timeline-content">
+
+              <h3>
+                Wall Recreation
+              </h3>
+
+
+              <p class="role">
+
+                Intern · Wall Township, NJ
+
+              </p>
+
+
+              <ul>
+
+                <li>
+
+                  Helped organize and set up a town fair,
+                  including donor information and vouchers
+                  for more than 1,000 service members.
+
+                </li>
+
+
+                <li>
+
+                  Set up events and facilitated communication
+                  between departments and head counselors
+                  for summer camp.
+
+                </li>
+
+
+                <li>
+
+                  Improved organization systems for municipal
+                  storage, the art room, and recreation sheds.
+
+                </li>
+
+              </ul>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         PROJECTS
+    ======================================================== -->
+
+    <section
+      id="projects"
+      class="section projects"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading">
+
+
+          <div>
+
+            <p class="eyebrow gold">
+              04 — PROJECTS
+            </p>
+
+
+            <h2>
+
+              Build a portfolio<br>
+
+              that
+              <em>
+                shows the work.
+              </em>
+
+            </h2>
+
+          </div>
+
+
+          <p class="section-intro">
+
+            These are suggested projects you can complete
+            and then feature here. Each is designed to
+            demonstrate finance skills to recruiters without
+            overstating experience.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="project-grid">
+
+
+          <!-- PROJECT 1 -->
+
+          <article class="project-card featured">
+
+            <span class="project-number">
+              01
+            </span>
+
+
+            <p class="project-type">
+              FINANCIAL ANALYSIS
+            </p>
+
+
+            <h3>
+              Public Company Valuation
+            </h3>
+
+
+            <p>
+
+              Choose a public company and build a
+              three-statement overview, comparable-company
+              analysis, and discounted cash flow valuation
+              in Excel.
+
+            </p>
+
+
+            <div class="tags">
+
+              <span>
+                Excel
+              </span>
+
+              <span>
+                DCF
+              </span>
+
+              <span>
+                Comps
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 2 -->
+
+          <article class="project-card">
+
+            <span class="project-number">
+              02
+            </span>
+
+
+            <p class="project-type">
+              MARKET RESEARCH
+            </p>
+
+
+            <h3>
+              Investment Research Report
+            </h3>
+
+
+            <p>
+
+              Write a concise equity research-style report
+              covering a company's industry, catalysts,
+              risks, financial performance, and valuation.
+
+            </p>
+
+
+            <div class="tags">
+
+              <span>
+                Research
+              </span>
+
+              <span>
+                Excel
+              </span>
+
+              <span>
+                Writing
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card">
+
+            <span class="project-number">
+              03
+            </span>
+
+
+            <p class="project-type">
+              DATA ANALYTICS
+            </p>
+
+
+            <h3>
+              Personal Finance Dashboard
+            </h3>
+
+
+            <p>
+
+              Create an interactive Excel or Google Sheets
+              dashboard that tracks spending, savings,
+              cash flow, and monthly trends.
+
+            </p>
+
+
+            <div class="tags">
+
+              <span>
+                Excel
+              </span>
+
+              <span>
+                Sheets
+              </span>
+
+              <span>
+                Dashboards
+              </span>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- PROJECT 4 -->
+
+          <article class="project-card">
+
+            <span class="project-number">
+              04
+            </span>
+
+
+            <p class="project-type">
+              BUSINESS STRATEGY
+            </p>
+
+
+            <h3>
+              Restaurant Operations Case
+            </h3>
+
+
+            <p>
+
+              Turn your restaurant experience into an
+              analytical case study by modeling staffing,
+              customer volume, table turnover, and revenue
+              under different scenarios.
+
+            </p>
+
+
+            <div class="tags">
+
+              <span>
+                Modeling
+              </span>
+
+              <span>
+                Operations
+              </span>
+
+              <span>
+                Strategy
+              </span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+
+        <div class="project-note">
+
+          <strong>
+            Portfolio tip:
+          </strong>
+
+          Complete 2–3 of these projects, add your actual
+          findings and screenshots, and replace these
+          suggested cards with your finished work.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         COMMUNITY
+    ======================================================== -->
+
+    <section
+      id="community"
+      class="section light"
+    >
+
+      <div class="container two-col">
+
+
+        <div>
+
+          <p class="eyebrow">
+            05 — COMMUNITY
+          </p>
+
+
+          <h2>
+
+            Experience<br>
+
+            beyond the
+            <em>
+              classroom.
+            </em>
+
+          </h2>
+
+        </div>
+
+
+
+        <div class="community-list">
+
+
+          <article>
+
+            <span>
+              01
+            </span>
+
+
+            <div>
+
+              <h3>
+                Fulfill Foodbank
+              </h3>
+
+
+              <p>
+
+                Volunteer work supporting the collection,
+                organization, and redistribution of canned
+                and other non-perishable goods.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article>
+
+            <span>
+              02
+            </span>
+
+
+            <div>
+
+              <h3>
+                Prime's Guardian Angels
+              </h3>
+
+
+              <p>
+
+                Member of a local volunteer group supporting
+                children and families through gifts, clothing,
+                sports, and other community resources.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SKILLS
+    ======================================================== -->
+
+    <section
+      id="skills"
+      class="section skills"
+    >
+
+      <div class="container">
+
+        <p class="eyebrow gold">
+          06 — SKILLS
+        </p>
+
+
+        <div class="skills-grid">
+
+
+          <div>
+
+            <span class="skill-index">
+              01
+            </span>
+
+
+            <h3>
+              Financial & Data
+            </h3>
+
+
+            <p>
+
+              Excel • Google Sheets •
+              Spreadsheet-based analysis
+
+            </p>
+
+          </div>
+
+
+
+          <div>
+
+            <span class="skill-index">
+              02
+            </span>
+
+
+            <h3>
+              Operations
+            </h3>
+
+
+            <p>
+
+              Time management • Organization •
+              Event coordination
+
+            </p>
+
+          </div>
+
+
+
+          <div>
+
+            <span class="skill-index">
+              03
+            </span>
+
+
+            <h3>
+              Communication
+            </h3>
+
+
+            <p>
+
+              Customer service • Team collaboration •
+              Issue resolution
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         CONTACT
+    ======================================================== -->
+
+    <section
+      id="contact"
+      class="section contact"
+    >
+
+      <div class="container contact-grid">
+
+
+        <div>
+
+          <p class="eyebrow">
+            07 — CONTACT
+          </p>
+
+
+          <h2>
+
+            Let's start<br>
+
+            <em>
+              a conversation.
+            </em>
+
+          </h2>
+
+
+          <p class="contact-copy">
+
+            Interested in connecting about internships,
+            finance opportunities, projects, or networking?
+            I'd be happy to hear from you.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="contact-links">
+
+
+          <!-- EMAIL -->
+
+          <a
+            href="mailto:mjd553@scarletmail.rutgers.edu"
+          >
+
+            <span>
+              Email
+            </span>
+
+
+            <strong>
+              mjd553@scarletmail.rutgers.edu
+            </strong>
+
+          </a>
+
+
+
+          <!-- LINKEDIN -->
+
+          <a
+            href="https://www.linkedin.com/in/michael-devito-396883325"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span>
+              LinkedIn
+            </span>
+
+
+            <strong>
+
+              linkedin.com/in/
+              michael-devito-396883325
+
+            </strong>
+
+          </a>
+
+
+
+          <!-- PHONE -->
+
+          <div>
+
+            <span>
+              Phone
+            </span>
+
+
+            <strong>
+              (732) 859-2356
+            </strong>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>
+        © 2026 Michael DeVito
+      </span>
+
+
+      <span>
+        Finance • Rutgers University
+      </span>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
+
+  <script>
+
+    /* =========================================
+       MOBILE MENU
+    ========================================= */
+
+    const menuButton =
+      document.querySelector(".menu-toggle");
+
+    const navigation =
+      document.querySelector(".nav-links");
+
+
+    menuButton.addEventListener(
+      "click",
+      function () {
+
+        navigation.classList.toggle("open");
+
+      }
+    );
+
+
+    /* =========================================
+       CLOSE MOBILE MENU AFTER CLICK
+    ========================================= */
+
+    const navigationLinks =
+      document.querySelectorAll(
+        ".nav-links a"
+      );
+
+
+    navigationLinks.forEach(
+      function (link) {
+
+        link.addEventListener(
+          "click",
+          function () {
+
+            navigation.classList.remove(
+              "open"
+            );
+
+          }
+        );
+
+      }
+    );
+
+
+    /* =========================================
+       PHOTO PLACEHOLDER
+    ========================================= */
+
+    const profilePhoto =
+      document.getElementById(
+        "profilePhoto"
+      );
+
+    const photoPlaceholder =
+      document.getElementById(
+        "photoPlaceholder"
+      );
+
+
+    profilePhoto.addEventListener(
+      "load",
+      function () {
+
+        photoPlaceholder.style.display =
+          "none";
+
+      }
+    );
+
+
+    profilePhoto.addEventListener(
+      "error",
+      function () {
+
+        profilePhoto.style.display =
+          "none";
+
+        photoPlaceholder.style.display =
+          "flex";
+
+      }
+    );
+
+  </script>
+
 
 </body>
 
