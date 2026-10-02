@@ -588,14 +588,6 @@
 
       object-fit: cover;
 
-      /*
-        This crop keeps your face centered while
-        showing the suit and tie.
-
-        Increase 30% if you want to move the
-        image downward.
-      */
-
       object-position: center 30%;
 
     }
@@ -988,7 +980,7 @@
 
     .project-card {
 
-      min-height: 285px;
+      min-height: 320px;
 
       padding: 30px;
 
@@ -1101,6 +1093,40 @@
       letter-spacing: 0.1em;
 
       text-transform: uppercase;
+
+    }
+
+
+    .project-button {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 10px 14px;
+
+      color: var(--navy);
+
+      background: var(--gold);
+
+      text-decoration: none;
+
+      font-size: 0.67rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+
+    }
+
+
+    .project-button:hover {
+
+      background: var(--gold-light);
+
+      transform: translateY(-2px);
 
     }
 
@@ -1918,19 +1944,6 @@
           <div class="portrait-frame">
 
 
-            <!--
-              IMPORTANT:
-
-              Put your uploaded photo in the same folder
-              as this HTML file.
-
-              Rename it:
-
-              senior picture.jpeg
-
-              This code will automatically display it.
-            -->
-
             <img
               src="senior picture.jpeg"
               alt="Michael DeVito professional portrait"
@@ -2184,9 +2197,7 @@
         <div class="timeline">
 
 
-          <!-- =================================================
-               TOWN GRILL
-          ================================================== -->
+          <!-- TOWN GRILL -->
 
           <article class="timeline-item">
 
@@ -2255,9 +2266,7 @@
 
 
 
-          <!-- =================================================
-               WALL RECREATION
-          ================================================== -->
+          <!-- WALL RECREATION -->
 
           <article class="timeline-item">
 
@@ -2356,11 +2365,10 @@
 
             <h2>
 
-              Build a portfolio<br>
+              Work that<br>
 
-              that
               <em>
-                shows the work.
+                demonstrates initiative.
               </em>
 
             </h2>
@@ -2371,10 +2379,9 @@
 
           <p class="section-intro">
 
-            These are suggested projects you can complete
-            and then feature here. Each is designed to
-            demonstrate finance skills to recruiters without
-            overstating experience.
+            Selected academic, professional-development,
+            and community experiences demonstrating
+            analytical thinking, teamwork, and initiative.
 
           </p>
 
@@ -2387,7 +2394,7 @@
 
 
           <!-- =================================================
-               PROJECT 1
+               PROJECT 1 — GOLDMAN SACHS
           ================================================== -->
 
           <article class="project-card featured">
@@ -2399,21 +2406,26 @@
 
 
             <p class="project-type">
-              FINANCIAL ANALYSIS
+              FINANCE • INTERNAL AUDIT
             </p>
 
 
             <h3>
-              Public Company Valuation
+              Goldman Sachs Internal Audit Job Simulation
             </h3>
 
 
             <p>
 
-              Choose a public company and build a
-              three-statement overview, comparable-company
-              analysis, and discounted cash flow valuation
-              in Excel.
+              Completed a practical internal audit job
+              simulation focused on the fundamentals of
+              internal auditing and risk assessment within
+              Global Banking & Markets. Applied structured
+              financial and risk-analysis concepts to
+              realistic banking scenarios while developing
+              a stronger understanding of how internal audit
+              supports risk management and business
+              decision-making.
 
             </p>
 
@@ -2421,18 +2433,34 @@
             <div class="tags">
 
               <span>
-                Excel
+                Internal Audit
               </span>
 
               <span>
-                DCF
+                Risk Assessment
               </span>
 
               <span>
-                Comps
+                Banking
+              </span>
+
+              <span>
+                Financial Analysis
               </span>
 
             </div>
+
+
+            <a
+              href="completion_certificate.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-button"
+            >
+
+              View Certificate
+
+            </a>
 
 
           </article>
@@ -2440,7 +2468,7 @@
 
 
           <!-- =================================================
-               PROJECT 2
+               PROJECT 2 — BEACH CLEANUP
           ================================================== -->
 
           <article class="project-card">
@@ -2452,20 +2480,24 @@
 
 
             <p class="project-type">
-              MARKET RESEARCH
+              COMMUNITY • TEAMWORK
             </p>
 
 
             <h3>
-              Investment Research Report
+              Community Beach Cleanup
             </h3>
 
 
             <p>
 
-              Write a concise equity research-style report
-              covering a company's industry, catalysts,
-              risks, financial performance, and valuation.
+              Participated in a community beach cleanup as
+              part of a team responsible for a designated
+              portion of the shoreline. Worked collaboratively
+              to organize and complete cleanup efforts within
+              the assigned area, contributing to a broader
+              community initiative focused on maintaining
+              and improving the local environment.
 
             </p>
 
@@ -2473,120 +2505,15 @@
             <div class="tags">
 
               <span>
-                Research
+                Teamwork
               </span>
 
               <span>
-                Excel
+                Community Service
               </span>
 
               <span>
-                Writing
-              </span>
-
-            </div>
-
-
-          </article>
-
-
-
-          <!-- =================================================
-               PROJECT 3
-          ================================================== -->
-
-          <article class="project-card">
-
-
-            <span class="project-number">
-              03
-            </span>
-
-
-            <p class="project-type">
-              DATA ANALYTICS
-            </p>
-
-
-            <h3>
-              Personal Finance Dashboard
-            </h3>
-
-
-            <p>
-
-              Create an interactive Excel or Google Sheets
-              dashboard that tracks spending, savings,
-              cash flow, and monthly trends.
-
-            </p>
-
-
-            <div class="tags">
-
-              <span>
-                Excel
-              </span>
-
-              <span>
-                Sheets
-              </span>
-
-              <span>
-                Dashboards
-              </span>
-
-            </div>
-
-
-          </article>
-
-
-
-          <!-- =================================================
-               PROJECT 4
-          ================================================== -->
-
-          <article class="project-card">
-
-
-            <span class="project-number">
-              04
-            </span>
-
-
-            <p class="project-type">
-              BUSINESS STRATEGY
-            </p>
-
-
-            <h3>
-              Restaurant Operations Case
-            </h3>
-
-
-            <p>
-
-              Turn your restaurant experience into an
-              analytical case study by modeling staffing,
-              customer volume, table turnover, and revenue
-              under different scenarios.
-
-            </p>
-
-
-            <div class="tags">
-
-              <span>
-                Modeling
-              </span>
-
-              <span>
-                Operations
-              </span>
-
-              <span>
-                Strategy
+                Organization
               </span>
 
             </div>
@@ -2603,12 +2530,12 @@
 
 
           <strong>
-            Portfolio tip:
+            Portfolio development:
           </strong>
 
-          Complete 2–3 of these projects, add your actual
-          findings and screenshots, and replace these
-          suggested cards with your finished work.
+          Future projects can be added here as I continue
+          building experience in financial analysis,
+          investment research, and business analytics.
 
 
         </div>
